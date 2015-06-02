@@ -1,1 +1,17 @@
-<p>This is the search partial.</p>
+<div class="search-results">
+	<ul class="unstyled">
+		<li class="dataset-item" ng-repeat="dataset in datasets">
+			<div class="dataset-content">
+				<h3 class="dataset-heading">
+					{{dataset.title}}
+				</h3>
+				<p class="organization">
+					{{dataset.organization.title}}
+				</p>
+				<div>
+					{{dataset.notes}}
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

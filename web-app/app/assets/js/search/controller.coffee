@@ -2,7 +2,15 @@ define([
   'angular'
   ], (angular) ->
 
-    ['$scope', ($scope) ->
-      console.log "I'm a controller!"
-    ]
+  class SearchCtrl
+    constructor: (@scope, @http) ->
+      @search("")
+
+    search: (query) =>
+      @http.get('/results').
+        success( (data, status, headers, config) =>
+          @scope.datasets = data
+        )
+
+  ['$scope', '$http', SearchCtrl]
 )
