@@ -4,7 +4,9 @@ version := "0.0.1-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   "org.webjars" % "angularjs" % "1.4.0",
-  "org.webjars" % "requirejs" % "2.1.18"
+  "org.webjars" % "requirejs" % "2.1.18",
+  "com.sksamuel.elastic4s" %% "elastic4s" % "1.5.12",
+  "com.sksamuel.elastic4s" %% "elastic4s-jackson" % "1.5.12"
 )     
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala, SbtWeb)
