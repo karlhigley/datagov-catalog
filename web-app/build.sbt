@@ -7,7 +7,7 @@ libraryDependencies ++= Seq(
   "org.webjars" % "requirejs" % "2.1.18"
 )     
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, SbtWeb)
 
 pipelineStages := Seq(rjs, digest, gzip)
 
