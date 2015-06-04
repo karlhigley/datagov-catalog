@@ -24,10 +24,11 @@ object Application extends Controller {
   def index = Action {
     Ok(views.html.Index())
   }
-  
-  def results = Action {
-    val query = search in "datasets" sort (by field "metadata_created" order SortOrder.DESC) limit 10
-    val response = client.execute(query).await
+
+  def results = Action { request =>
+    val searchString = request.queryString("q").mkString(" ")
+    val elasticQuery = search in "datasets" query searchString sort (by field "metadata_created" order SortOrder.DESC) limit 10
+    val response = client.execute(elasticQuery).await
     val datasets = response.hitsAs[Dataset]
     Ok(Json.toJson(datasets))
   }

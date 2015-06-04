@@ -5,13 +5,54 @@ body {
   font-size: 87.5%;
 }
 
-.search-results {
+.search {
   width: 732px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-giant {
+  position: relative;
+}
+
+.search-giant input {
+  border-radius: 0px;
+}
+
+.search-giant input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 14px 10px;
+  width: 100%;
+  height: auto;
+}
+
+.search-giant button {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: block;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background: transparent url("../img/icon-search-27x26.png") no-repeat center center;
+  text-indent: -900em;
+  margin-top: -16px;
 }
 
 ul.unstyled {
   list-style: none;
   margin-left: 0;
+}
+
+.search-results {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .dataset-heading {

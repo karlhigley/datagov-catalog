@@ -1,5 +1,16 @@
-<div class="search-results">
-	<ul class="unstyled">
+<div class="search">
+	<form ng-submit="ctrl.search(query)">
+		<span class="control-group search-giant">
+		    <input id="search-big" type="text"
+		    	ng-model="query" autocomplete="off"
+		    	placeholder="Search datasets..." 
+		    	onblur="if(value=='') value = 'Search datasets...'"
+		    	onfocus="if(value=='Search datasets...') value = ''">
+		    <button type="submit" value="search">Submit</button>
+		</span>
+	</form>
+
+	<ul class="unstyled search-results">
 		<li class="dataset-item" ng-repeat="dataset in datasets">
 			<div class="dataset-content">
 				<h3 class="dataset-heading">
