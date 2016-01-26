@@ -8,6 +8,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "1.6.0" % "provided",
   "org.apache.spark" %% "spark-mllib" % "1.6.0" % "provided",
   "org.scalanlp" %% "chalk" % "1.3.2" exclude ("com.typesafe.sbt", "sbt-pgp"),
+  "com.github.karlhigley" %% "spark-neighbors" % "0.1.0",
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
   "com.typesafe.akka" %% "akka-actor" % "2.3.4" % "test"
 )
