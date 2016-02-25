@@ -1,0 +1,7 @@
+elasticsearch:
+  image: elasticsearch:1.5.2
+  ports:
+   - "9200:9200"
+   - "9300:9300"
+  volumes:
+    - ./services/elasticsearch/config:/usr/share/elasticsearch/config
