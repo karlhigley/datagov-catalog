@@ -1,3 +1,9 @@
+web-app:
+  image: web-app:0.0.1-SNAPSHOT
+  ports:
+   - "9000:9000"
+  links:
+   - elasticsearch
 elasticsearch:
   image: elasticsearch:1.5.2
   ports:
