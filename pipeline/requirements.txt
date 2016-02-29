@@ -1,3 +1,4 @@
 luigi==2.0.1
 -r scraper/requirements.txt
+-r tasks/requirements.txt
 
