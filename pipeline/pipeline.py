@@ -1,6 +1,6 @@
 import luigi
 
-from tasks import scrape
+from tasks import scrape, index
 
 
 if __name__ == "__main__":
