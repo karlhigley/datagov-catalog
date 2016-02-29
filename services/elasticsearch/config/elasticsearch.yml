@@ -1,0 +1,6 @@
+################################### Cluster ###################################
+
+# Cluster name identifies your cluster for auto-discovery. If you're running
+# multiple clusters on the same network, make sure you're using unique names.
+#
+cluster.name: datagov_catalog
